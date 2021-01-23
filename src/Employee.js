@@ -12,7 +12,7 @@ class Employee extends React.Component {
   };
 
   tableRow = (ind) => {
-    const { currentRow, employeeArr } = this.state;
+    const { employeeArr } = this.state;
     this.setState({
       currentRow: { employeeData: employeeArr[ind], index: ind },
     });
@@ -56,17 +56,19 @@ class Employee extends React.Component {
 
   handleDelete = (index) => {
     const { employeeArr } = this.state;
-    let tempArray = employeeArr;
-    tempArray.splice(index, 1);
-    console.log("delete ka index", index);
-    this.setState({
-      employeeArr: tempArray,
-    });
+    if (index !== undefined) {
+      let tempArray = employeeArr;
+      tempArray.splice(index, 1);
+      console.log("delete ka index", index);
+      this.setState({
+        employeeArr: tempArray,
+      });
+    } else {
+      swal("Please Select Row For Deletion!");
+    }
   };
 
   render() {
-    const d = new Date("2015-03-25");
-    const date = d.toLocaleDateString();
     const { handleLogOut } = this.props;
     const { employeeArr, currentRow } = this.state;
     return (

@@ -14,8 +14,6 @@ const EmployeeContact = ({
     salary: "",
   });
 
-  console.log(currentRow);
-
   useEffect(() => {
     if (currentRow) {
       setValues({
@@ -53,7 +51,6 @@ const EmployeeContact = ({
   };
 
   const handleUpdateBtn = () => {
-    console.log("curIndex", currentRow.index);
     if (currentRow.index >= 0) {
       handleUpdate(values, currentRow.index);
       setValues({
@@ -62,6 +59,8 @@ const EmployeeContact = ({
         email: "",
         salary: "",
       });
+    } else {
+      swal("Please select Row For Updation!");
     }
   };
 

@@ -11,19 +11,11 @@ class Employee extends React.Component {
     currentRow: "",
   };
 
-  // useEffect(()=>{},[]);
-
   tableRow = (ind) => {
     const { currentRow, employeeArr } = this.state;
-    // console.log("index", ind)
-    this.setState(
-      {
-        currentRow: { employeeData: employeeArr[ind], index: ind },
-      },
-      () => {
-        // console.log(this.state.currentRow, "currenr");
-      }
-    );
+    this.setState({
+      currentRow: { employeeData: employeeArr[ind], index: ind },
+    });
   };
 
   handleSave = (values) => {
@@ -33,30 +25,20 @@ class Employee extends React.Component {
     employeeArr.length > 0
       ? employeeArr.map((val, ind) => {
           if (values.email !== val.email) {
-            this.setState(
-              {
-                // employeeArr: temp,
-                employeeArr: [...employeeArr, values],
-                currentRow: "",
-              },
-              () => {
-                // console.log(this.state.employeeArr);
-              }
-            );
+            this.setState({
+              // employeeArr: temp,
+              employeeArr: [...employeeArr, values],
+              currentRow: "",
+            });
           } else {
             swal("User Already Exist!");
           }
         })
-      : this.setState(
-          {
-            // employeeArr: temp,
-            employeeArr: [...employeeArr, values],
-            currentRow: "",
-          },
-          () => {
-            // console.log(this.state.employeeArr);
-          }
-        );
+      : this.setState({
+          // employeeArr: temp,
+          employeeArr: [...employeeArr, values],
+          currentRow: "",
+        });
   };
 
   handleUpdate = (values, index) => {
@@ -87,7 +69,6 @@ class Employee extends React.Component {
     const date = d.toLocaleDateString();
     const { handleLogOut } = this.props;
     const { employeeArr, currentRow } = this.state;
-    // console.log("arrayy", employeeArr);
     return (
       <div>
         <button

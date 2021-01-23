@@ -7,7 +7,6 @@ const EmployeeContact = ({
   handleDelete,
   currentRow,
 }) => {
-  //   console.log("contact", currentRow.firstName);
   const [values, setValues] = React.useState({
     firstName: "",
     lastName: "",
@@ -29,7 +28,6 @@ const EmployeeContact = ({
   }, [currentRow]);
 
   const handleAddBtn = () => {
-    // console.log(values.firstName, "val val");
     if (
       values.firstName &&
       values.lastName &&
@@ -77,20 +75,11 @@ const EmployeeContact = ({
     });
   };
 
-  // 3.2,3.4,3.3,3.8,3.8,3.7=3.5
-  //1st=>4,4,3.4,3,2.4,2.4=>3.2
-  //5th=>AI:3.8,CA:4,NT:3.8,NA:3.4,CC:4,OB:4
-  //6th=>SPM:4,NS:2.8,IPT:4,TOCI-1:4,MM:3.8-3.4,DW:4
-
-  //2.56,3.33,2.96,3.76,3.86,3.6=3.3
-  //IPT:4,SPM:3.8,MM:3.4,TOCI-1:4,NS:3,DW:3.8
-
   return (
     <div>
       <div
         style={{
           marginTop: 30,
-          // marginLeft: 20,
           textAlign: "center",
         }}
       >

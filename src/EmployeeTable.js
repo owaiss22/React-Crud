@@ -11,16 +11,13 @@ const EmployeeTable = ({ employeeArr, tableRow }) => {
       <table id="customers">
         <thead>
           <tr>
-            {/* <th>ID</th> */}
             <th>Name</th>
             <th>Father Name</th>
             <th>Email Address</th>
             <th>Salary</th>
-            {/* <th>Job Start Date</th> */}
           </tr>
         </thead>
         <tbody>
-          {/* {console.log("line71", employeeArr)} */}
           {employeeArr.map((val, ind) => {
             return (
               <tr onClick={() => tableRow(ind)} key={ind}>

@@ -90,7 +90,13 @@ class App extends Component {
               style={{
                 padding: "10px 100px",
                 backgroundColor: "#1b2430",
+                border: "none",
                 color: "#fff",
+                textAlign: "center",
+                textDecoration: "none",
+                boxShadow: "none",
+                borderRadius: "10px",
+                cursor: "pointer",
               }}
             >
               Login

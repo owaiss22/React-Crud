@@ -150,10 +150,16 @@ const EmployeeContact = ({
         <button
           onClick={() => handleAddBtn()}
           style={{
-            padding: "10px 20px",
             backgroundColor: "#1b2430",
+            border: "none",
             color: "#fff",
+            padding: "10px 20px",
+            textAlign: "center",
+            textDecoration: "none",
             marginRight: 10,
+            boxShadow: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
           }}
         >
           Add Record
@@ -161,10 +167,16 @@ const EmployeeContact = ({
         <button
           onClick={() => handleUpdateBtn()}
           style={{
-            padding: "10px 20px",
             backgroundColor: "#1b2430",
+            border: "none",
             color: "#fff",
+            padding: "10px 20px",
+            textAlign: "center",
+            textDecoration: "none",
             marginRight: 10,
+            boxShadow: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
           }}
         >
           Update Record
@@ -172,10 +184,16 @@ const EmployeeContact = ({
         <button
           onClick={() => handleDlt()}
           style={{
-            padding: "10px 20px",
             backgroundColor: "#1b2430",
+            border: "none",
             color: "#fff",
+            padding: "10px 20px",
+            textAlign: "center",
+            textDecoration: "none",
             marginRight: 10,
+            boxShadow: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
           }}
         >
           Delete Record

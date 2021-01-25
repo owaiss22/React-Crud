@@ -23,7 +23,7 @@ class Employee extends React.Component {
     // const temp = employeeArr;
     // temp.push(values);
     employeeArr.length > 0
-      ? employeeArr.map((val, ind) => {
+      ? employeeArr.map((val) => {
           if (values.email !== val.email) {
             this.setState({
               // employeeArr: temp,
@@ -33,6 +33,7 @@ class Employee extends React.Component {
           } else {
             swal("User Already Exist!");
           }
+          return console.log(val);
         })
       : this.setState({
           // employeeArr: temp,
@@ -45,7 +46,6 @@ class Employee extends React.Component {
     const { employeeArr } = this.state;
     const tempArray = employeeArr;
     tempArray[index] = values;
-    console.log("update ka index", index);
     this.setState({
       employeeArr: tempArray,
     });
@@ -59,7 +59,6 @@ class Employee extends React.Component {
     if (index !== undefined) {
       let tempArray = employeeArr;
       tempArray.splice(index, 1);
-      console.log("delete ka index", index);
       this.setState({
         employeeArr: tempArray,
       });
@@ -77,10 +76,16 @@ class Employee extends React.Component {
           onClick={handleLogOut}
           style={{
             float: "right",
-            padding: "10px 30px",
             backgroundColor: "#1b2430",
+            border: "none",
             color: "#fff",
+            padding: "10px 20px",
+            textAlign: "center",
+            textDecoration: "none",
             marginRight: 10,
+            boxShadow: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
           }}
         >
           LogOut
